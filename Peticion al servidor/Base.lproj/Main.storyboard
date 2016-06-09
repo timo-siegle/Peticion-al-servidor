@@ -27,9 +27,6 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DI8-Wu-iFr">
                                 <rect key="frame" x="277" y="207" width="48" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="JB3-5o-gLb"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -37,6 +34,9 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="978-84-376-0494-7" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="IAP-ml-adP">
                                 <rect key="frame" x="220" y="91" width="161" height="30"/>
                                 <accessibility key="accessibilityConfiguration" hint="978-84-376-0494-7"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="161" id="Mer-Bk-xgJ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -44,7 +44,7 @@
                                 <rect key="frame" x="180" y="236" width="241" height="301"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="301" id="zLP-cY-yD8"/>
+                                    <constraint firstAttribute="width" constant="241" id="fBC-Wm-ABo"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -52,7 +52,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="IAP-ml-adP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="200" id="3Zn-WQ-ATI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LPP-Rg-Nms" secondAttribute="bottom" constant="63" id="1ry-he-bny"/>
+                            <constraint firstItem="IAP-ml-adP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7eD-fY-hQ9"/>
                             <constraint firstItem="SRF-jY-nz4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="109" id="CDP-e8-QMk"/>
                             <constraint firstItem="LPP-Rg-Nms" firstAttribute="top" secondItem="DI8-Wu-iFr" secondAttribute="bottom" constant="8" id="DpI-XN-Z71"/>
                             <constraint firstItem="LPP-Rg-Nms" firstAttribute="leading" secondItem="DI8-Wu-iFr" secondAttribute="leading" id="MuP-ko-WCA"/>
@@ -61,29 +62,37 @@
                             <constraint firstItem="DI8-Wu-iFr" firstAttribute="leading" secondItem="SRF-jY-nz4" secondAttribute="leading" id="VtM-JP-jiK"/>
                             <constraint firstItem="SRF-jY-nz4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="IAP-ml-adP" secondAttribute="leading" constant="5" id="Vwf-xE-T8H"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LPP-Rg-Nms" secondAttribute="bottom" constant="63" id="YcP-cS-95O"/>
+                            <constraint firstItem="SRF-jY-nz4" firstAttribute="top" secondItem="IAP-ml-adP" secondAttribute="bottom" constant="8" symbolic="YES" id="a8s-qe-60o"/>
+                            <constraint firstItem="IAP-ml-adP" firstAttribute="centerX" secondItem="DI8-Wu-iFr" secondAttribute="centerX" id="bbZ-FC-8dd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DI8-Wu-iFr" secondAttribute="trailing" constant="256" id="hBP-nI-W7b"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="SRF-jY-nz4" secondAttribute="trailing" constant="257" id="l4q-uV-D9r"/>
+                            <constraint firstItem="LPP-Rg-Nms" firstAttribute="top" secondItem="DI8-Wu-iFr" secondAttribute="bottom" constant="8" symbolic="YES" id="hbK-8q-4Ex"/>
+                            <constraint firstItem="IAP-ml-adP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="71" id="hte-ay-uxG"/>
+                            <constraint firstItem="SRF-jY-nz4" firstAttribute="leading" secondItem="DI8-Wu-iFr" secondAttribute="leading" id="hus-DT-vwH"/>
+                            <constraint firstItem="IAP-ml-adP" firstAttribute="centerX" secondItem="SRF-jY-nz4" secondAttribute="centerX" id="lYe-Fw-Fk0"/>
                             <constraint firstItem="SRF-jY-nz4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="ld5-DX-zIQ"/>
-                            <constraint firstItem="SRF-jY-nz4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="257" id="o2s-9h-f5m"/>
+                            <constraint firstItem="DI8-Wu-iFr" firstAttribute="top" secondItem="SRF-jY-nz4" secondAttribute="bottom" constant="48" id="liP-KM-Deo"/>
+                            <constraint firstItem="DI8-Wu-iFr" firstAttribute="centerX" secondItem="LPP-Rg-Nms" secondAttribute="centerX" id="mpQ-4J-200"/>
                             <constraint firstItem="SRF-jY-nz4" firstAttribute="leading" secondItem="DI8-Wu-iFr" secondAttribute="leading" id="oa8-EG-iuj"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="IAP-ml-adP" secondAttribute="trailing" constant="199" id="u2k-WL-KUf"/>
                             <constraint firstItem="DI8-Wu-iFr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="256" id="u9T-zL-f3B"/>
                             <constraint firstItem="IAP-ml-adP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="71" id="vAO-Gl-BQb"/>
-                            <constraint firstItem="LPP-Rg-Nms" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="160" id="xWl-EQ-ULy"/>
                             <constraint firstItem="DI8-Wu-iFr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="187" id="yHA-Bn-Pcs"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="LPP-Rg-Nms" secondAttribute="trailing" constant="159" id="yw6-TI-dXU"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="vAO-Gl-BQb"/>
                                 <exclude reference="DpI-XN-Z71"/>
                                 <exclude reference="MuP-ko-WCA"/>
+                                <exclude reference="CDP-e8-QMk"/>
                                 <exclude reference="Vwf-xE-T8H"/>
                                 <exclude reference="ld5-DX-zIQ"/>
                                 <exclude reference="oa8-EG-iuj"/>
                                 <exclude reference="Qg7-Wf-hIR"/>
+                                <exclude reference="VtM-JP-jiK"/>
                                 <exclude reference="hBP-nI-W7b"/>
                                 <exclude reference="u9T-zL-f3B"/>
+                                <exclude reference="yHA-Bn-Pcs"/>
                                 <exclude reference="PCZ-6i-iQj"/>
+                                <exclude reference="YcP-cS-95O"/>
                             </mask>
                         </variation>
                     </view>
