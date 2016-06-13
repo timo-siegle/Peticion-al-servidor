@@ -28,27 +28,36 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        let reachability: Reachability
-        do {
-            reachability = try Reachability.reachabilityForInternetConnection()
-        } catch {
-            return false
-        }
         
-        if reachability.isReachable() {
-            self.fetchBookDetails(textField.text!)
-        } else {
-            
-            // En caso de falla en Internet, se muestra una alerta indicando ese problema
-            let alertController = UIAlertController(title: "Internet connection", message:
-                "Please check your connection and try again!", preferredStyle: UIAlertControllerStyle.Alert)
+        if textField.text!.isEmpty {
+            let alertController = UIAlertController(title: "Missing ISBN", message:
+                "Please enter a ISBN and try again!", preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
             
             self.presentViewController(alertController, animated: true, completion: nil)
+            return false
+        } else {
+            textField.resignFirstResponder()
+            let reachability: Reachability
+            do {
+                reachability = try Reachability.reachabilityForInternetConnection()
+            } catch {
+                return false
+            }
+            
+            if reachability.isReachable() {
+                self.fetchBookDetails(textField.text!)
+            } else {
+                
+                // En caso de falla en Internet, se muestra una alerta indicando ese problema
+                let alertController = UIAlertController(title: "Internet connection", message:
+                    "Please check your connection and try again!", preferredStyle: UIAlertControllerStyle.Alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+                
+                self.presentViewController(alertController, animated: true, completion: nil)
+            }
+            return true
         }
-        
-        return true
     }
     
     // La marca de "limpiar" en la caja de texto aparece todo el tiempo
